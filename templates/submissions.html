@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Applications Submissions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f5;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #bbb;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .scrollable {
+            overflow-x: auto;
+            max-height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <h2>Submitted Job Applications</h2>
+
+    <div class="scrollable">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First</th>
+                    <th>Middle</th>
+                    <th>Last</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Gender</th>
+                    <th>Qualification</th>
+                    <th>DOB</th>
+                    <th>Father</th>
+                    <th>Mother</th>
+                    <th>Current Address</th>
+                    <th>Permanent Address</th>
+                    <th>Landline</th>
+                    <th>Birthplace</th>
+                    <th>Passing Year</th>
+                    <th>Languages</th>
+                    <th>Hobbies</th>
+                    <th>About</th>
+                    <th>Nationality</th>
+                    <th>Aadhar</th>
+                    <th>PAN</th>
+                    <th>Edu 1 (Qual)</th>
+                    <th>Edu 1 (Univ)</th>
+                    <th>Edu 1 (Year)</th>
+                    <th>Edu 1 (Marks)</th>
+                    <th>Edu 2 (Qual)</th>
+                    <th>Edu 2 (Univ)</th>
+                    <th>Edu 2 (Year)</th>
+                    <th>Edu 2 (Marks)</th>
+                    <th>Edu 3 (Qual)</th>
+                    <th>Edu 3 (Univ)</th>
+                    <th>Edu 3 (Year)</th>
+                    <th>Edu 3 (Marks)</th>
+                    <th>Company 1</th>
+                    <th>Role 1</th>
+                    <th>From 1</th>
+                    <th>To 1</th>
+                    <th>Company 2</th>
+                    <th>Role 2</th>
+                    <th>From 2</th>
+                    <th>To 2</th>
+                    <th>Company 3</th>
+                    <th>Role 3</th>
+                    <th>From 3</th>
+                    <th>To 3</th>
+                    <th>Job Type</th>
+                    <th>Joining Date</th>
+                    <th>Joining Time</th>
+                    <th>Location</th>
+                    <th>Relocate</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for app in applications %}
+                <tr>
+                    {% for item in app %}
+                    <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="back-link">
+        <a href="/">Back to Form</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forms and Type Attributes</title>
+  <style>
+    body {
+      background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTT2qVCE0OgQ4r875S8sAPWLQ-bPRco38sJA&s") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 32px;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+    }
+    form {
+      padding: 20px;
+    }
+    fieldset {
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 2px solid #fff;
+    }
+    legend {
+      border: 2px solid white;
+      padding: 5px 15px;
+      border-radius: 20px 0px 20px 0px;
+      color: white;
+      background: linear-gradient(45deg, blue, rgb(209, 65, 89));
+    }
+    table {
+      width: 100%;
+    }
+    h3, h4, th, td {
+      color: white;
+    }
+    input, textarea, select {
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: black;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .inline-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      accent-color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>ONLINE JOB APPLICATION FORM</h1>
+  <form action="/submit" method="POST">
+
+    <!-- Personal Information -->
+    <fieldset>
+      <legend><h4>Personal Information</h4></legend>
+      <table>
+        <tr>
+          <td><h3>First Name</h3></td>
+          <td><input type="text" name="first"></td>
+          <td><h3>Middle Name</h3></td>
+          <td><input type="text" name="middle"></td>
+          <td><h3>Last Name</h3></td>
+          <td><input type="text" name="last"></td>
+        </tr>
+        <tr>
+          <td><h3>Email</h3></td>
+          <td><input type="email" name="email"></td>
+          <td><h3>Mobile Number</h3></td>
+          <td><input type="text" name="mobile"></td>
+        </tr>
+        <tr>
+          <td><h3>Gender</h3></td>
+          <td class="inline-group">
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+          </td>
+        </tr>
+        <tr>
+          <td><h3>Qualification</h3></td>
+          <td><input type="text" name="qualification"></td>
+          <td><h3>Date Of Birth</h3></td>
+          <td><input type="date" name="dob"></td>
+        </tr>
+        <tr>
+          <td><h3>Father Name</h3></td>
+          <td><input type="text" name="father"></td>
+          <td><h3>Mother Name</h3></td>
+          <td><input type="text" name="mother"></td>
+        </tr>
+        <tr>
+          <td><h3>Current Address</h3></td>
+          <td><textarea name="current_address"></textarea></td>
+          <td><h3>Permanent Address</h3></td>
+          <td><textarea name="permanent_address"></textarea></td>
+        </tr>
+        <tr>
+          <td><h3>Landline Number</h3></td>
+          <td><input type="text" name="landline"></td>
+          <td><h3>Place Of Birth</h3></td>
+          <td><input type="text" name="birthplace"></td>
+        </tr>
+        <tr>
+          <td><h3>Year Of Passing</h3></td>
+          <td><input type="date" name="passing_year"></td>
+        </tr>
+        <tr>
+          <td><h3>Languages Known</h3></td>
+          <td class="inline-group">
+            <input type="checkbox" name="languages" value="Telugu">Telugu
+            <input type="checkbox" name="languages" value="English">English
+            <input type="checkbox" name="languages" value="Hindi">Hindi
+          </td>
+        </tr>
+        <tr>
+          <td><h3>Select Your Hobbies</h3></td>
+          <td class="inline-group">
+            <input type="checkbox" name="hobbies" value="Eating">Eating
+            <input type="checkbox" name="hobbies" value="Coding">Coding
+            <input type="checkbox" name="hobbies" value="Sleeping">Sleeping
+          </td>
+        </tr>
+        <tr>
+          <td><h3>About Yourself</h3></td>
+          <td><textarea name="about"></textarea></td>
+        </tr>
+        <tr>
+          <td><h3>Nationality</h3></td>
+          <td>
+            <select name="nationality">
+              <option value="">--select--</option>
+              <option value="Indian">Indian</option>
+              <option value="American">American</option>
+              <option value="African">African</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><h3>Aadhar Card Number</h3></td>
+          <td><input type="text" name="aadhar"></td>
+          <td><h3>Pan Card Number</h3></td>
+          <td><input type="text" name="pan"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Educational Details -->
+    <fieldset>
+      <legend><h4>Educational Details</h4></legend>
+      <table>
+        <tr>
+          <th>S.No</th>
+          <th>Qualification</th>
+          <th>Institute/University</th>
+          <th>Year Of Passing</th>
+          <th>Marks(%)</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input type="text" name="edu_qual1"></td>
+          <td><input type="text" name="edu_univ1"></td>
+          <td><input type="date" name="edu_year1"></td>
+          <td><input type="text" name="edu_marks1"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="text" name="edu_qual2"></td>
+          <td><input type="text" name="edu_univ2"></td>
+          <td><input type="date" name="edu_year2"></td>
+          <td><input type="text" name="edu_marks2"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text" name="edu_qual3"></td>
+          <td><input type="text" name="edu_univ3"></td>
+          <td><input type="date" name="edu_year3"></td>
+          <td><input type="text" name="edu_marks3"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Work Experience -->
+    <fieldset>
+      <legend><h4>Work Experience</h4></legend>
+      <table>
+        <tr>
+          <th>S.No</th>
+          <th>Company</th>
+          <th>Work/Roles</th>
+          <th>From Date</th>
+          <th>To Date</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input type="text" name="company1"></td>
+          <td><input type="text" name="role1"></td>
+          <td><input type="date" name="from1"></td>
+          <td><input type="date" name="to1"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="text" name="company2"></td>
+          <td><input type="text" name="role2"></td>
+          <td><input type="date" name="from2"></td>
+          <td><input type="date" name="to2"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text" name="company3"></td>
+          <td><input type="text" name="role3"></td>
+          <td><input type="date" name="from3"></td>
+          <td><input type="date" name="to3"></td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Other Details -->
+    <fieldset>
+      <legend><h4>Other Details</h4></legend>
+      <table>
+        <tr>
+          <td><h3>Job Type</h3></td>
+          <td class="inline-group">
+            <input type="radio" name="jobtype" value="Permanent">Permanent
+            <input type="radio" name="jobtype" value="Contract">Contract
+            <input type="radio" name="jobtype" value="Other">Other
+          </td>
+        </tr>
+        <tr>
+          <td><h3>Date Of Joining</h3></td>
+          <td><input type="date" name="joining_date"></td>
+        </tr>
+        <tr>
+          <td><h3>Time Of Joining</h3></td>
+          <td><input type="time" name="joining_time"></td>
+        </tr>
+        <tr>
+          <td><h3>Preferred Job Location</h3></td>
+          <td class="inline-group">
+            <input type="radio" name="location" value="Hyderabad">Hyderabad
+            <input type="radio" name="location" value="Bangalore">Bangalore
+            <input type="radio" name="location" value="Others">Others
+          </td>
+        </tr>
+        <tr>
+          <td><h3>Willing To Relocate To Hyderabad</h3></td>
+          <td class="inline-group">
+            <input type="radio" name="relocate" value="Yes">Yes
+            <input type="radio" name="relocate" value="No">No
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+</html>
